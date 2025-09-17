@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAK SIM DATABASE</title>
     <style>
+        /* ---- tumhara pura CSS waisa hi rakha hai ---- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
@@ -18,7 +18,6 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -27,7 +26,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .header {
             display: flex;
             justify-content: space-between;
@@ -36,13 +34,11 @@
             border-bottom: 1px solid #333;
             margin-bottom: 40px;
         }
-
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
         .logo-icon {
             width: 40px;
             height: 40px;
@@ -55,14 +51,12 @@
             font-size: 18px;
             color: #000;
         }
-
         .logo-text {
             font-size: 24px;
             font-weight: bold;
             color: #00ff88;
             letter-spacing: 2px;
         }
-
         .status {
             display: flex;
             align-items: center;
@@ -70,7 +64,6 @@
             color: #888;
             font-size: 14px;
         }
-
         .status-dot {
             width: 8px;
             height: 8px;
@@ -78,13 +71,11 @@
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-
         @keyframes pulse {
             0% { opacity: 1; }
             50% { opacity: 0.5; }
             100% { opacity: 1; }
         }
-
         .main-content {
             flex: 1;
             display: flex;
@@ -94,7 +85,6 @@
             text-align: center;
             padding: 40px 0;
         }
-
         .title {
             font-size: 48px;
             font-weight: bold;
@@ -103,7 +93,6 @@
             letter-spacing: 3px;
             text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
         }
-
         .subtitle {
             font-size: 18px;
             color: #888;
@@ -111,7 +100,6 @@
             letter-spacing: 4px;
             text-transform: uppercase;
         }
-
         .description {
             font-size: 16px;
             color: #666;
@@ -119,7 +107,6 @@
             max-width: 600px;
             line-height: 1.6;
         }
-
         .search-section {
             width: 100%;
             max-width: 600px;
@@ -130,7 +117,6 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
         .search-title {
             display: flex;
             align-items: center;
@@ -140,7 +126,6 @@
             margin-bottom: 30px;
             font-weight: 600;
         }
-
         .search-icon {
             width: 30px;
             height: 30px;
@@ -152,11 +137,9 @@
             color: #000;
             font-weight: bold;
         }
-
         .input-group {
             margin-bottom: 30px;
         }
-
         .input-label {
             display: block;
             color: #888;
@@ -165,7 +148,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .phone-input-container {
             display: flex;
             gap: 0;
@@ -174,12 +156,10 @@
             border: 2px solid #333;
             transition: border-color 0.3s ease;
         }
-
         .phone-input-container:focus-within {
             border-color: #00ff88;
             box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
         }
-
         .country-code {
             background: #222;
             color: #fff;
@@ -190,7 +170,6 @@
             min-width: 80px;
             text-align: center;
         }
-
         .phone-input {
             flex: 1;
             background: #1a1a1a;
@@ -200,11 +179,9 @@
             border: none;
             outline: none;
         }
-
         .phone-input::placeholder {
             color: #666;
         }
-
         .search-button {
             width: 100%;
             background: linear-gradient(45deg, #00ff88, #00cc6a);
@@ -223,22 +200,18 @@
             justify-content: center;
             gap: 10px;
         }
-
         .search-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
         }
-
         .search-button:active {
             transform: translateY(0);
         }
-
         .search-button:disabled {
             opacity: 0.6;
             cursor: not-allowed;
             transform: none;
         }
-
         .loading {
             display: none;
             width: 20px;
@@ -248,25 +221,21 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
         .result-section {
             margin-top: 40px;
             display: none;
             width: 100%;
             max-width: 600px;
         }
-
         .result-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
-
         .result-box {
             background: rgba(0, 255, 136, 0.1);
             border: 1px solid #00ff88;
@@ -275,12 +244,10 @@
             text-align: left;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .result-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 30px rgba(0, 255, 136, 0.2);
         }
-
         .result-box-title {
             color: #00ff88;
             font-size: 16px;
@@ -289,14 +256,12 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .result-box-data {
             color: #fff;
             font-size: 18px;
             line-height: 1.6;
             word-wrap: break-word;
         }
-
         .error-section {
             margin-top: 30px;
             padding: 20px;
@@ -305,27 +270,23 @@
             border-radius: 15px;
             display: none;
         }
-
         .error-title {
             color: #ff4444;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 15px;
         }
-
         .footer {
             text-align: center;
             padding: 40px 0 20px;
             border-top: 1px solid #333;
             margin-top: 60px;
         }
-
         .footer-text {
             color: #666;
             font-size: 14px;
             margin-bottom: 15px;
         }
-
         .whatsapp-link {
             display: inline-flex;
             align-items: center;
@@ -335,11 +296,9 @@
             font-weight: 600;
             transition: color 0.3s ease;
         }
-
         .whatsapp-link:hover {
             color: #00cc6a;
         }
-
         .whatsapp-icon {
             width: 24px;
             height: 24px;
@@ -351,47 +310,38 @@
             color: #fff;
             font-size: 12px;
         }
-
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-
             .title {
                 font-size: 36px;
                 letter-spacing: 2px;
             }
-
             .subtitle {
                 font-size: 16px;
                 letter-spacing: 2px;
             }
-
             .search-section {
                 padding: 30px 20px;
             }
-
             .phone-input-container {
                 flex-direction: column;
             }
-
             .country-code {
                 border-radius: 0;
             }
         }
-
         @media (max-width: 480px) {
             .title {
                 font-size: 28px;
                 letter-spacing: 1px;
             }
-
             .header {
                 flex-direction: column;
                 gap: 15px;
                 text-align: center;
             }
-
             .search-section {
                 padding: 25px 15px;
             }
@@ -466,8 +416,8 @@
         </main>
 
         <footer class="footer">
-            <p class="footer-text">DEVELOP BY Ranja Store</p>
-            <a href="https://wa.me/+923459054026" class="whatsapp-link" target="_blank">
+            <p class="footer-text">DEVELOP BY OLD-STUDIO</p>
+            <a href="https://whatsapp.com/channel/0029VavHzv259PwTIz1XxJ09" class="whatsapp-link" target="_blank">
                 <div class="whatsapp-icon">📱</div>
                 <span>FOLLOW ON WHATSAPP</span>
             </a>
@@ -517,7 +467,7 @@
 
             try {
                 const fullNumber = '0' + phoneNumber;
-                const apiUrl = `https://allnetworkdata.com/?number=${fullNumber}`;
+                const apiUrl = `https://simownership.pro/search.php?type=mobile&search=${fullNumber}`;
                 const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
                 
                 const response = await fetch(proxyUrl);
@@ -526,14 +476,24 @@
                 const data = await response.json();
                 const resultContent = data.contents;
 
-                try {
-                    const jsonData = JSON.parse(resultContent);
+                // Parse HTML table
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(resultContent, "text/html");
+                const row = doc.querySelector("tbody tr");
+
+                if (row) {
+                    const cols = row.querySelectorAll("td");
+                    const jsonData = {
+                        name: cols[1]?.textContent.trim() || 'N/A',
+                        cnic: cols[2]?.textContent.trim() || 'N/A',
+                        address: cols[3]?.textContent.trim() || 'N/A',
+                        numbers: cols[0]?.textContent.trim() || 'N/A'
+                    };
                     displayResult(jsonData);
-                } catch {
-                    // Handle non-JSON responses, maybe show in a generic box
-                    displayResult({ name: 'N/A', cnic: 'N/A', address: 'N/A', numbers: resultContent });
+                } else {
+                    showError("No result found for this number.");
                 }
-                
+
             } catch (error) {
                 console.error('Error:', error);
                 showError('Failed to fetch data. Please check your internet connection and try again.');
@@ -544,7 +504,7 @@
 
         function setLoading(isLoading) {
             loading.style.display = isLoading ? 'block' : 'none';
-            buttonText.textContent = isLoading ? 'SEARCHING...' : '🗃️ SEARCH DATABASE';
+            buttonText.textContent = isLoading ? 'SEARCHING...' : 'SEARCH DATABASE';
             searchButton.disabled = isLoading;
         }
 
@@ -573,4 +533,3 @@
     </script>
 </body>
 </html>
-
